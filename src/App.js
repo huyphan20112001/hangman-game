@@ -22,21 +22,17 @@ function App() {
       if (play && keyCode >= 65 && keyCode <= 90) {
         const letterEntered = key;
         // console.log(key);
-        console.log(correctLetters.includes(letterEntered));
+        // console.log(correctLetters.includes(letterEntered));
         if (randomWord.includes(letterEntered)) {
           if (!correctLetters.includes(letterEntered)) {
             setCorrectLetters((lastLetter) => [...lastLetter, letterEntered]);
-            console.log("correct insert");
           } else {
             show(setShowNotification);
-            console.log(123);
           }
         } else {
           if (!wrongLetters.includes(letterEntered)) {
             setWrongLetters((lastLetter) => [...lastLetter, letterEntered]);
-            console.log("wrong insert");
           } else {
-            console.log(123);
             show(setShowNotification);
           }
         }
